@@ -1,11 +1,8 @@
-// In this problem you have to read an integer value and calculate the smallest possible number of banknotes in which 
-// the value may be decomposed. The possible banknotes are 100, 50, 20, 10, 5, 2 and 1. Print the read value and the list of banknotes.
+// Write a program that reads an employee's number, his/her worked hours number in a month and the amount he received per hour.
+// Print the employee's number and salary that he/she will receive at end of the month, with two decimal places.
 
-// Input
-// The input file contains an integer value N (0 < N < 1000000).
-
-// Output
-// Print the read number and the minimum quantity of each necessary banknotes in Portuguese language, as the given example. 
+// Don’t forget to print the line's end after the result, otherwise you will receive “Presentation Error”.
+// Don’t forget the space before and after the equal signal and after the U$.
 
 
 
@@ -13,8 +10,13 @@
 
 import 'dart:io';
 
-void main(List<String> args) {
-  print("Enter The value:" );
- int number = int.parse(stdin.readLineSync()!);
- print(number);
+void main() {
+  String employeeNumber = stdin.readLineSync()!;
+  double workedHours = double.parse(stdin.readLineSync()!);
+  double hourlyWage = double.parse(stdin.readLineSync()!);
+  double salary = workedHours * hourlyWage;
+
+  print("NUMBER = $employeeNumber");
+  print("SALARY = U\$ ${salary.toStringAsFixed(2)}");
+  print("");
 }
