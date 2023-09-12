@@ -13,10 +13,10 @@ according to the following example, with a blank space before and after the equa
 import 'dart:io';
 
 void main(List<String> args) {
-  int a = int.parse(stdin.readLineSync());
-  int b = int.parse(stdin.readLineSync());
-  int c = int.parse(stdin.readLineSync());
-  int d = int.parse(stdin.readLineSync());
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(stdin.readLineSync()!);
+  int c = int.parse(stdin.readLineSync()!);
+  int d = int.parse(stdin.readLineSync()!);
 
   var dif = (a * b) - (c * d);
   print('DIFERENCA = $dif');
